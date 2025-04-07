@@ -73,22 +73,16 @@ Permite modificar la cantidad de productos disponibles mediante ingreso o salida
 
 **Tipos de movimiento:**
 
-- **Ingreso:** Incrementa la cantidad por recepción o compra.
-- **Salida:** Reduce la cantidad por ventas u otros retiros.
+- **Editar cantidad:** Incrementa o disminuye la cantidad por recepción o compra.
 
 
 **Criterios de Aceptación:**
 
-- **Ingreso:**
+- **Editar cantidad:**
   - El sistema debe permitir ingresar unidades adicionales a un producto existente.
   - La cantidad ingresada debe ser un número entero positivo.
-  - El movimiento debe registrarse correctamente en el historial con usuario, fecha, tipo y cantidad.
-
-- **Salida:**
-  - El sistema debe permitir registrar salidas si hay suficiente stock disponible.
+  - El movimiento debe registrarse correctamente en el historial con fecha y cantidad.
   - No debe permitir registrar una salida que deje el stock negativo.
-  - Cada salida debe quedar registrada en el historial con los mismos campos.
-
 
 ---
 
@@ -147,11 +141,7 @@ Sistema de autenticación con credenciales y control de roles.
 **Requisitos:**
 
 - Inicio y cierre de sesión
-- Cifrado de contraseñas (bcrypt, Argon2, etc.)
-- Expiración y protección de sesión
-- Roles:
-  - **Administrador:** Acceso completo
-  - **Empleado:** Acceso limitado a funciones específicas
+- Cifrado de contraseñas (bcrypt)
 
 **Criterios de Aceptación:**
 
